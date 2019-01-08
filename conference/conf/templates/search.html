@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4>ZNAJDŹ SALĘ</h4>
+    <form method="POST">{% csrf_token %}
+        <label>Minimalna pojemność: <input type="number" step="1" name="seats"><br>
+        <label>Dzień: <input type="date" name="date"></label><br>
+        <label>Dostępność rzutnika: <input type="checkbox" name="projector"></label><br>
+        <label><input type="submit" name="send" value="Szukaj"></label>
+    </form>
+
+
+
+{% endblock %}

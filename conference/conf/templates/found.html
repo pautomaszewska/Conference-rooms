@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4>DOSTĘPNE SALE W DNIU  {{date}}</h4>
+    <table border="1px">
+    <tr><th>lp</th><th>Nazwa</th><th>Ilość miejsc</th><th>Dostępność rzutnika</th><th>Rezerwacja</th></tr>
+
+    {% for r in room %}
+		<tr><td>{{ forloop.counter }}</td>
+            <td>{{ r.name }}</td>
+			<td>{{ r.seats }}</td>
+            <td>{{ r.projector|yesno:"Tak,Nie" }}</td>
+            <td><a href="/reservation/{{r.id}}">Zarezerwuj</a></td>
+		</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

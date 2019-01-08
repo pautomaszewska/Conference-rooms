@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4>ZMIEŃ PARAMETRY SALI</h4>
+    <form method="POST">{% csrf_token %}
+        <label>Nazwa: <input name="name" value="{{room.name}}" type="text"></label>
+        <label>Ilość miejsc: <input name="seats" type="number" value="{{room.seats}}" min="10" step="1"></label>
+        <label>Dostępność projektora: <input name="projector"  type="checkbox"></label>
+        <label><input type="submit" name="send" value="Zmień"></label>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4 style="text-transform: uppercase">Sala {{room.name}}</h4>
+<p>Zarezerwowano w dniach: {% for a in res %} {{ a.date |date:'d-m-Y'}} {% endfor %}</p>
+    <form method="POST" name="form">{% csrf_token %}
+        <label>Wybierz datę: <input name="date"  type="date"></label>
+        <label>Komentarz: <input name="comment" type="text" ></label>
+        <label><input type="submit" name="send" value="Zarezerwuj"></label>
+    </form>
+
+{% endblock %}
