@@ -1,15 +1,15 @@
 {% extends "base.html" %}
-
+{% load staticfiles %}
 {% block content %}
 
 <h4>SALE W BUDYNKU</h4>
 <p>Stan na dzień: {{date}}</p>
-    <table border="1px" width="60%">
+    <table>
     <tr><th>lp</th><th>Nazwa</th><th>Ilość miejsc</th><th>Projektor</th><th>Dostępność</th><th>Edycja</th><th>Usuwanie</th><th>Rezerwacja</th></tr>
 
     {% for a in room %}
 		<tr><td>{{ forloop.counter }}</td>
-			<td><a href="/room/{{a.id}}">{{ a.name }}</td>
+			<td class="link"><a href="/room/{{a.id}}">{{ a.name }}</td>
 			<td>{{ a.seats }}</td>
 			<td>{{ a.projector|yesno:"Tak,Nie" }} </td>
 			<td>{% for room in a.reservation_set.all %}
@@ -19,11 +19,12 @@
 				{% endif %}
 			{% endfor %}
 			</td>
-            <td><a href="/room/edit/{{a.id}}">Edytuj</a></td>
-			<td><a href="/room/delete/{{a.id}}">Usuń</a></td>
-			<td><a href="/reservation/{{a.id}}">Zarezerwuj</a></td>
+            <td class="link"><a href="/room/edit/{{a.id}}">Edytuj</a></td>
+			<td class="link"><a href="/room/delete/{{a.id}}">Usuń</a></td>
+			<td class="link"><a href="/reservation/{{a.id}}">Zarezerwuj</a></td>
 		</tr>
 {% endfor %}
+
 </table>
 
 {% endblock %}

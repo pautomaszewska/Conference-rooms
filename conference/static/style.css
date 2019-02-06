@@ -1,0 +1,80 @@
+h2, h3 , h4 {
+     font-family: Liberation Serif, Times New Roman, serif;
+     text-align: center;
+      font-weight: bold;
+}
+
+p {
+    font-family: Verdana, Arial, sans-serif;
+    text-align: center;
+    font-size: 16px;
+}
+
+form {
+    font-family: Verdana, Arial, sans-serif;
+    text-align: center;
+    font-size: 16px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+table {
+    border: 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    font-family: Verdana, Arial, sans-serif;
+
+}
+
+td, tr {
+    border: 1px solid transparent;
+    height: 30px;
+
+}
+
+th {
+    background: #9999ff;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    color: #293d3d;
+}
+
+tr:nth-child(even) td {
+    background: #F1F1F1;
+}
+
+tr:nth-child(odd) td {
+    background: #FEFEFE;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+
+}
+
+/*.link:hover {*/
+    /*background-color:  #160f29;*/
+    /*color: white;*/
+/*}*/
+
+/*a:hover, a:active {*/
+    /*color: white;*/
+/*}*/
+
+
+
+label {
+    width: 150px;
+    margin: 0;
+    color: #293d3d;
+
+}
+
+

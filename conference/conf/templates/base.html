@@ -1,9 +1,15 @@
 <!DOCTYPE html>
+{% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script type="text/JavaScript" src="{% static 'app.js' %}"></script>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     {% block title %}
     <title>Sale konferencyjne</title>
+
     {% endblock %}
 </head>
 <body>
@@ -13,8 +19,7 @@
 
         {% endblock %}
 <footer>
-   <p><a href="{% url 'rooms' %}">Lista sal</a> |<a href="{% url 'new' %}">Dodaj salę</a> | <a href="{% url 'search' %}">Znajdź salę</a></p>
+   <p><a href="{% url 'rooms' %}">Lista sal</a> | <a href="{% url 'new' %}">Dodaj salę</a> | <a href="{% url 'search' %}">Znajdź salę</a></p>
 </footer>
-
 </body>
 </html>
