@@ -5,7 +5,7 @@
 <h4>SALE W BUDYNKU</h4>
 <p>Stan na dzień: {{date}}</p>
     <table>
-    <tr><th>lp</th><th>Nazwa</th><th>Ilość miejsc</th><th>Projektor</th><th>Dostępność</th><th>Edycja</th><th>Usuwanie</th><th>Rezerwacja</th></tr>
+    <tr><th>lp</th><th>Nazwa</th><th>Ilość miejsc</th><th>Projektor</th><th>Rezerwacja</th><th>Edycja</th><th>Usuwanie</th><th>Rezerwacja</th></tr>
 
     {% for a in room %}
 		<tr><td>{{ forloop.counter }}</td>
@@ -15,7 +15,7 @@
 			<td>{% for room in a.reservation_set.all %}
 				{% now "d-m-Y" as todays_date %}
 				{% if todays_date == room.date|date:'d-m-Y' %}
-					Rezerwacja
+					X
 				{% endif %}
 			{% endfor %}
 			</td>

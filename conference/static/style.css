@@ -34,7 +34,7 @@ td, tr {
 }
 
 th {
-    background: #9999ff;
+    background: #c1b0d7;
     font-weight: bold;
     text-align: center;
 }
@@ -45,11 +45,11 @@ td {
 }
 
 tr:nth-child(even) td {
-    background: #F1F1F1;
+    background: #fef9ff;
 }
 
 tr:nth-child(odd) td {
-    background: #FEFEFE;
+    background: #fcefef;
 }
 
 a:link, a:visited {
@@ -58,17 +58,6 @@ a:link, a:visited {
     display: inline-block;
 
 }
-
-/*.link:hover {*/
-    /*background-color:  #160f29;*/
-    /*color: white;*/
-/*}*/
-
-/*a:hover, a:active {*/
-    /*color: white;*/
-/*}*/
-
-
 
 label {
     width: 150px;

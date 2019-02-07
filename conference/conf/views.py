@@ -21,7 +21,7 @@ def add_room(request):
         else:
             r.projector = False
         r.save()
-        return redirect('/rooms')
+        return redirect('/')
 
 def rooms(request):
     d = datetime.today().strftime('%d-%m-%Y')
@@ -49,7 +49,7 @@ def edit_room(request,id):
         else:
             r.projector = False
         r.save()
-        return redirect('/rooms')
+        return redirect('/')
 
 def delete_room(request, id):
     r = Room.objects.get(pk=id)

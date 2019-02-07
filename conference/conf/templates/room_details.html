@@ -5,6 +5,7 @@
 <h4>SZCZEGÓŁY SALI</h4>
     <table border="1px">
     <tr><th>Nazwa</th><th>Ilość miejsc</th><th>Projektor</th><th>Rezerwacje</th><th>Zarezerwuj</th></tr>
+		<tr>
 			<td>{{ room.name }}</td>
 			<td>{{ room.seats }}</td>
 			<td>{{ room.projector|yesno:"Tak,Nie" }}</td>
@@ -12,7 +13,7 @@
 					{{ a.date |date:'d-m-Y'}}
 				{% endfor %}
 			</td>
-			<td><a href="/reservation/{{room.id}}">Zarezerwuj</a></td>
+			<td class="link"><a href="/reservation/{{room.id}}">Zarezerwuj</a></td>
 
 		</tr>
 
