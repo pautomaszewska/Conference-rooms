@@ -1,18 +1,22 @@
-# System rezerwacji sal konferencyjnych
+# Conference rooms booking app
 
-### Informacje
-Prosta aplikacja do rezerwacji sal konferencyjnych w biurowcu. 
-Możliwe jest rezerwowanie sali na cały dzień.
+### Info
+Simple app created for booking conference rooms in an office.
+Allows to book rooms for the whole day.
 
-### Technologie
+### Technologies
 * Python 3.6 
 * Django 2.1 
 * PostgreSQL 10.6
 
-### Funkcje
-* rezerwacja sali na dany dzień
-* edycja parametrów sali
-* dodawanie nowej sali
-* wyszukiwanie dostępnych sal na podstawie podanych parametrów
+### Functions
+* conference room reservation
+* conference room parameters edition
+* adding new room
+* room search
 
-
+### Installation
+* create Postgres database 'conference'
+* clone and download repository
+* install requirements
+* run migrations for 'conf' app
